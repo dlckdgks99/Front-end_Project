@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>지구본 움직이기</title>\
+    <link rel="stylesheet" href="css/gigu.css">
+    <script src="libs/jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function(){
+            //지구이미지 웹요소(노드) 차자서 저장            
+            var $gigu = $("#gigu");
+            //버튼에 이벤트 등록
+            $("#btnStart").click(function(){
+                $gigu.animate({
+                    left:"480px"
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+    <div id="panel">
+        <div id="bar"></div>
+        <img src="http://img.danawa.com/prod_img/500000/282/995/img/3995282_1.jpg?shrink=330:330&_v=20190624170620" id="gigu">
+        <div id="btn">
+            <button id="btnStart">지구본 움직이기</button>
+        </div>
+    </div>
+</body>
+</html>

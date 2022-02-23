@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script scr="libs/jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#menu2 li").css("color","#f00")
+        
+        })
+    </script>
+    <title>자바스크립트로 색상 바꾸기</title>
+</head>
+<body>
+    <div>
+        <ul class="menu" id="menu1">
+            <li>김밥</li>
+            <li>참치밥</li>
+            <li>멸치김밥</li>
+            <li>소고기김밥</li>
+            <li>계란말이김밥</li>
+        </ul>
+        <ul class="menu" id="menu2">
+            <li>김치찌게</li>
+            <li>된장찌게</li>
+            <li>오뎅탕</li>
+            <li>마라탕</li>
+            <li>부엇국</li>
+        </ul>
+    </div>
+    <script>
+        window.onload=function(){
+            var menu2=document.getElementById("menu2");
+            //ul태그(menu2선택자) 하위 요소인 li태그를 배열로 저장을 하고 있음
+            var liArrays=menu2.getElementsByTagName("li");
+            //li태그를 하나씩 접근ㅇ해서 일일히 글자색을 변경
+            for(var i=0;i<liArrays.length;i++){
+                var li=liArrays[i];
+                li.style.color="blueviolet";
+            }
+        }
+    </script>
+
+</body>
+</html>
