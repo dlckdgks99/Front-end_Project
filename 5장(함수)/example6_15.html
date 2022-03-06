@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var student={};
+        student.이름='이창한';
+        student.나이=24;
+        student.성별="남";
+        student.toString=function(){
+            var output='';
+            for(var key in student){
+                if(key!='toString'){
+                    output +=key+'\t'+student[key]+'\n';
+                }
+            }
+            return output;
+        }
+        alert(student.toString());
+        delete (student.성별);
+
+        alert(student);
+    </script>
+</body>
+</html>

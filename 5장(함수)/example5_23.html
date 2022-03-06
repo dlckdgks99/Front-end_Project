@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //콜백 함수(callback)란 매개변수로 전달하는 함수-->자바스크립트에서는 함수도 하나의 자료형이므로 매개변수로 전달 할 수 있다.
+        
+        //callTenTimes함수 선언
+        function callTenTimes(callback){
+                for(var i=0;i<3;i++){
+                    callback();
+                }
+        }
+        //callback이라는 변수 선언하고 함수를 매개변수로 넣음  
+        // // var callback=function(){
+        // //     alert('함수 호출');
+        // // }
+        // callTenTimes(callback);
+
+        //callback이라는 변수 선언으 안하는 방법
+        callTenTimes(function(){
+            alert('함수 호 출ㄹ루루');
+        });
+    </script>
+</body>
+</html>
