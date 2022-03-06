@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var product={
+            name:'Micro V S',
+            price:'1500원',
+            language:'한국어',
+            supportOS:'Win 32/64',
+            subscription:true
+        };
+
+        var output='';
+        //for(var i=0; i<product.length;i++)
+        for(var key in product){
+            output +='★'+key+' : ' +product[key]+'\n';
+        }
+        alert(output);
+
+        //in 키워드-->해당 키가 객체안에 있는 지 확인 가능
+        //with 키워드-->객체를 명시할 필요 없이 속성을 쉽게 사용 가능 
+        with(product){
+            alert(name);
+            alert(price);
+            
+        }
+    </script>
+</body>
+</html>
