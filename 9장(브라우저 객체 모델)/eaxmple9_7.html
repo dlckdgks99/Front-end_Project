@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //screen 객체 종류
+        var output='';
+        for(var key in screen){
+            output +='●'+key+': '+ screen[key]+'\n';
+        }
+        //alert(output);
+        var child =window.open('','','width=300, height=200');
+        var width =screen.width;
+        var height=screen.height;
+
+        //window 속성
+        child.moveTo(0,0);
+        child.resizeTo(width,height);
+
+        setInterval(function(){
+            child.resizeBy(-20,-20);
+            child.moveBy(10,10);
+        },1000);
+    </script>
+</body>
+</html>
