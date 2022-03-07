@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var date =new Date('December 9');
+        // var date =new Date('December 9,1991');
+        // var date =new Date('December 9,1991,02:24:23');
+        var date =new Date();
+        date.setDate(date.getDate()+7);
+        alert(date);
+
+        Date.prototype.getInterval=function (otherDate){
+            var interval;
+
+            if(this>otherDate){
+                interval =this.getTime()-otherDate.getTime();
+            }
+            else{
+                interval=otherDate.getTime()-this.getTime();
+            }
+            return Math.floor(interval/(1000*60*60*24));
+        };
+
+        var now =new Date();
+        var before =new Date('December 9, 2021');
+
+        alert('Interval: '+ now.getInterval(before)+'일');
+    </script>
+</body>
+</html>

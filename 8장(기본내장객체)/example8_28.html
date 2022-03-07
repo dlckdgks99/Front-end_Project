@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Student(name,korea,math, english,science){
+            this.이름=name;
+            this.국어=korea;
+            this.수학=math;
+            this.영어=english;
+            this.과학=science;
+
+            this.getSum=function(){
+                return this.국어+this.수학+this.영어+this.과학;
+            };
+            this.getAverage=function(){
+                return this.getSum()/4;
+            };
+            this.toString=function(){
+                return this.이름 +'     ' + this.getSum() + '     ' +this.getAverage();
+            };
+        }
+
+        var Students=[];
+        Students.push(new Student('이창한', 96,98,92,98));
+        Students.push(new Student('양재훈', 1,23,32,81));
+        Students.push(new Student('양재후니', 32,213,3112,811));
+        Students.push(new Student('양재훈13', 49,213,332,381));
+
+        Students.sort(function(left,right){
+            return right.getSum()-left.getSum();
+        });
+        students=students.slice(0,3);
+
+        var output='이름     총점     평균\n';
+        for(var i in students){
+            output +=students[i].toString()+'\n';
+        }
+        //push() , pop() , splice()
+        alert(output);
+</script>
+</body>
+</html>

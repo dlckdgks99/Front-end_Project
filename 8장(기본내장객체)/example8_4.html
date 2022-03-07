@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var object={property:273};
+
+        var output='';
+        output+="HOP('property'): " + object.hasOwnProperty('property')+'\n';
+        output+="HOP('constructor'): " + object.hasOwnProperty('constructor')+'\n';
+        output+="PIE('property'): " + object.propertyIsEnumerable('property')+'\n';
+        output+="PIE('constructor'): " + object.propertyIsEnumerable('constructor')+'\n';
+        alert(output);
+
+        for(var key in object){
+            alert(object[key]);
+        }
+    </script>
+</body>
+</html>
