@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        window.onload=function(){
+            var header=document.createElement('h1');
+            var textNode=document.createTextNode('Hello Dom');
+            
+            //appendchild로 body문서 객체에 header 문서 객체를 추가
+            header.appendChild(textNode);
+            document.body.appendChild(header);
+        }
+    </script>
+</body>
+</html>
