@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //document란? DOM 트리의 최상위 객체입니다.
+        window.onload=function(){
+            document.getElementById('my-form').onsubmit=function(){
+                var pass=document.getElementById('pass').value;
+                var passCheck=document.getElementById('pass-check').value;
+                if(pass=passCheck){
+                    alert('회원가입 성공');
+                }else{
+                    alert('회원가입 실패');
+                    return false;
+                }
+                };
+        };
+    </script>
+
+</head>
+<body>
+    <!--디폴트 이벤트?-> 예를 들어 입력 양식의 submit 버튼을 누르면 자동을 입력 양식을 제출하고 페이지를 새로고침하는 것-->
+    <!--폼 만들기 , <br/>는 한줄 띄어쓰기-->
+    <form id="my-form">
+        
+        <label for="name">이름</label><br/>
+        <input type="text" name="name" id="name"/><br/>
+        <label for="pass">비밀번호</label><br/>
+        <input type="password" name="pass" id="pass"/><br/>
+        <label for="pass-check">비밀번호확인</label><br/>
+        <input type="password" id="pass-check"/><br/>
+        <input type="submit" value="제출"/>
+    </form>
+</body>
+</html>

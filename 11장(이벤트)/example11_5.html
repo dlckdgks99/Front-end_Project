@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload=function(){
+            //click버튼을 누르면 함수가 실행되는 코드 
+            document.getElementById('header').onclick=function(){
+                this.style.color='orange';
+                this.style.backgroundColor='red';
+                alert(this);
+            
+            };
+        };
+    </script>
+</head>
+<body>
+   <h1 id="header">click</h1>
+</body>
+</html>
